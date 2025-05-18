@@ -79,7 +79,7 @@ public class PaintingMeta extends EntityMeta implements ObjectDataProvider {
         }
     }
 
-    public sealed interface Variant extends ProtocolObject, PaintingVariants permits VariantImpl {
+    public interface Variant extends ProtocolObject, PaintingVariants {
         @NotNull NetworkBuffer.Type<DynamicRegistry.Key<Variant>> NETWORK_TYPE = NetworkBuffer.RegistryKey(Registries::paintingVariant, true);
         @NotNull BinaryTagSerializer<DynamicRegistry.Key<Variant>> NBT_TYPE = BinaryTagSerializer.registryKey(Registries::paintingVariant);
 
